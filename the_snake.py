@@ -4,6 +4,7 @@
 """
 
 import pygame
+
 from random import randint
 
 
@@ -211,3 +212,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
