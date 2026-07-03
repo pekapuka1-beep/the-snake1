@@ -96,7 +96,7 @@ class Snake(GameObject):
         return self.positions[0]
 
     def move(self):
-        """Обновляет позицию змейки в соответствии с текущим направлением."""
+        """Обновляет позицию змейки."""
         head_x, head_y = self.get_head_position()
         dx, dy = self.direction
 
