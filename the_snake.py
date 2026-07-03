@@ -4,7 +4,6 @@
 """
 
 import pygame
-
 from random import randint
 
 
@@ -113,7 +112,7 @@ class Snake(GameObject):
             self.last = None
 
     def update_direction(self):
-        """Применяет новое направление, и не является разворотом на 180°."""
+        """Применяет новое направление, если оно задано и не является разворотом на 180°."""
         if self.next_direction is not None:
             opposite = {UP: DOWN, DOWN: UP, LEFT: RIGHT, RIGHT: LEFT}
             if self.next_direction != opposite.get(self.direction):
@@ -159,7 +158,7 @@ class Snake(GameObject):
 
 
 def handle_keys(snake):
-    """нажатие клавиш и направление змейки."""
+    """Обрабатывает нажатия клавиш и устанавливает следующее направление змейки."""
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -212,4 +211,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
